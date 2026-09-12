@@ -1,0 +1,35 @@
+{
+    "author": "fsargent",
+    "dependencies": {},
+    "keywords": [
+        "pebble-app"
+    ],
+    "name": "watchpebble",
+    "pebble": {
+        "capabilities": [
+            "location"
+        ],
+        "displayName": "Watchpebble",
+        "enableMultiJS": true,
+        "messageKeys": [
+            "KEY_SUNRISE",
+            "KEY_SUNSET",
+            "KEY_USE_12H",
+            "KEY_RAIN_HOURS",
+            "KEY_SHOW_RAIN"
+        ],
+        "projectType": "native",
+        "resources": {
+            "media": []
+        },
+        "sdkVersion": "3",
+        "targetPlatforms": [
+            "gabbro"
+        ],
+        "uuid": "bd4a3951-59ce-44d3-9f00-5c6b77a4c93f",
+        "watchapp": {
+            "watchface": true
+        }
+    },
+    "version": "1.0.0"
+}
