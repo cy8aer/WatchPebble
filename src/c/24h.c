@@ -165,6 +165,10 @@ static void canvas_update_proc(Layer *layer, GContext *ctx) {
     GColor outline = GColorBlack;
 
     int display_h = s_use_12h ? (i % 12 == 0 ? 12 : i % 12) : i;
+    if (display_h == 0) {
+      display_h = 24;
+    }
+
     char num_str[4];
     snprintf(num_str, sizeof(num_str), "%d", display_h);
     // GFont font = is_major ? font_major : font_minor;
