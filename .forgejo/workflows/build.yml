@@ -1,0 +1,21 @@
+name: WatchPebble-Build-Action
+
+jobs:
+  build:
+    runs-on: docker
+    steps:
+      - name: Code checkout
+        uses: actions/checkout@v4
+      - name: apt update
+        run: apt update
+      - name: apt upgrade
+        run: apt upgrade --yes
+      - name: install the needed packages
+        run: |
+          apt install --yes \
+          nodejs npm libsdl2-2.0-0 libglib2.0-0 libpixman-1-0 zlib1g libsndio7.0
+      - name: install the pebble sdk
+        run: uv tool install pebble-tool
+      - name: do the build
+        run: pebble build
+
